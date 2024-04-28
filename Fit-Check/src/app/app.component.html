@@ -1,5 +1,8 @@
 <!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="user">
+<nav class="container navbar navbar-expand px-3 justify-content-between" *ngIf="user">
+    <h1 class="logo">
+        <span>Fit</span><span class="colorCheck">Check</span>
+    </h1>
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
         <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
