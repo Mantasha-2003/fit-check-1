@@ -1,0 +1,55 @@
+/* header */
+.colorCheck {
+    color: #f0aeba;
+  }
+  /* home */
+  /* Home Page */
+  .BannerImgWrap {
+    filter: brightness(0.8);
+    /* opacity: 0.8; */
+    position: relative;
+  }
+  .BannerImgWrap img {
+    width: 100%;
+    height: calc(100vh - 70px);
+    object-fit: cover;
+    object-position: center;
+  }
+  .BannerImgWrap .BannerImgContent {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+  }
+  .BannerImgWrap .BannerImgContent button {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #383838;
+    border-radius: 10px;
+  }
+  .OutfitHead {
+    text-align: center;
+    padding: 40px 0;
+  }
+  .OutfitHead h1 {
+    font-weight: 500;
+  }
+  .OutfitGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .OutfitGrid .OutfitBox img {
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    border-radius: 10px;
+    object-fit: contain;
+    background-position: center;
+  }
+  
