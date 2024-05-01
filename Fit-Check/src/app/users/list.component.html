@@ -1,31 +1,38 @@
-<h1>Users</h1>
-<a routerLink="add" class="btn btn-sm btn-success mb-2">Add User</a>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th style="width: 30%">First Name</th>
-            <th style="width: 30%">Last Name</th>
-            <th style="width: 30%">Username</th>
-            <th style="width: 10%"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let user of users">
-            <td>{{user.firstName}}</td>
-            <td>{{user.lastName}}</td>
-            <td>{{user.username}}</td>
-            <td style="white-space: nowrap">
-                <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary me-1">Edit</a>
-                <button (click)="deleteUser(user.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="user.isDeleting">
-                    <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
-                    <span *ngIf="!user.isDeleting">Delete</span>
-                </button>
-            </td>
-        </tr>
-        <tr *ngIf="!users">
-            <td colspan="4" class="text-center">
-                <span class="spinner-border spinner-border-lg align-center"></span>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="userWrap">
+    <div class="userHead">
+        <div class="d-flex userFlex">
+            <h2>
+                Manage User
+            </h2>
+            <a routerLink="add" class="btn btn-sm btn-primary mb-2">Add User</a>
+        </div>
+        
+        
+    <div class="userTable">
+            <div class="userTableGrid">
+                <h4>First Name</h4>
+                <h4>Last Name</h4>
+                <h4>Username</h4>
+                <h4>Actions</h4>
+            </div>
+            <div *ngFor="let user of users" class="userTableGrid">
+                <h4>{{user.firstName}}</h4>
+                <h4>{{user.lastName}}</h4>
+                <h4>{{user.username}}</h4>
+                <h4 style="white-space: nowrap">
+                    <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary me-3">Edit</a>
+                    <button (click)="deleteUser(user.id)" class="btn btn-sm btn-deleteUser" [disabled]="user.isDeleting">
+                        <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
+                        <span *ngIf="!user.isDeleting">Delete</span>
+                    </button>
+                </h4>
+            </div>
+            <div *ngIf="!users">
+                <h4 colspan="4" class="text-center">
+                    <span class="spinner-border spinner-border-lg align-center"></span>
+                </h4>
+            </div>
+    </div>
+    </div>
+</div>
+
